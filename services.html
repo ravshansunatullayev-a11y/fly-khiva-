@@ -1,0 +1,100 @@
+<section id="services" class="content">
+  <h1 class="section-title">Наши услуги</h1>
+
+  <div class="services">
+    <div class="service-card">
+      <img src="air_cargo_resized_507x365.jpg" alt="Грузы">
+      <h2>Авиаперевозки грузов</h2>
+      <p>Организация грузовых авиаперевозок по всему миру с оптимальными тарифами.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="truck_logistics_resized_507x365.jpg" alt="Склад">
+      <h2>Складская логистика</h2>
+      <p>Хранение, упаковка и обработка грузов на сертифицированных складах.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="customs_clearance_resized_507x365.jpg" alt="Таможня">
+      <h2>Таможенное оформление</h2>
+      <p>Помощь в оформлении экспортных и импортных грузов.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 20px;
+    color: #333;
+    animation: fadeDown 1s ease-out;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .service-card h2 {
+    font-size: 20px;
+    margin: 15px;
+    color: #222;
+    animation: slideIn 1s ease;
+  }
+
+  .service-card p {
+    font-size: 15px;
+    margin: 0 15px 20px;
+    color: #555;
+    line-height: 1.4;
+    animation: slideIn 1.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Анимации */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>

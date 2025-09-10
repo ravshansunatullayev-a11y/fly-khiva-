@@ -1,0 +1,109 @@
+
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автоперевозки</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      background: #fff; 
+      color: #333;      
+      padding: 30px 20px;
+      border-bottom: 1px solid #ddd; 
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .truck-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .truck-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .truck-card:hover {
+      transform: translateY(-5px);
+    }
+    .truck-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .truck-card h2 {
+      margin: 15px;
+      font-size: 1.3em;
+      color: #004080; 
+    }
+    .truck-card p {
+      margin: 0 15px 20px;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Автоперевозки</h1>
+  <p>Мы предоставляем транспорт для любых типов грузов</p>
+</header>
+
+<section class="truck-types">
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\s-l1200.jpg" alt="Тентованные фуры">
+    <h2>Тентованные фуры (Euro Truck, Curtain-Sider)</h2>
+    <p>Самые универсальные. Используются для перевозки большинства видов грузов. Позволяют загружать боком и сверху.</p>
+  </div>
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\gen_5_casacdia_reefer_blue_680x400.jpg" alt="Рефрижератор">
+    <h2>Рефрижераторы (Reefer Trucks)</h2>
+    <p>Оснащены холодильной установкой. Используются для перевозки продуктов питания, медикаментов, цветов.</p>
+  </div>
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\izoterm-isuzu-forward-18-12300kg-800x600.jpg" alt="Изотермический грузовик">
+    <h2>Изотермические грузовики</h2>
+    <p>Похожи на рефрижератор, но без активного охлаждения. Поддерживают стабильную температуру.</p>
+  </div>
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\c38c08101d2c4ec1c7f1bc43ac1ae043.webp" alt="Автовоз">
+    <h2>Автовозы</h2>
+    <p>Предназначены для перевозки автомобилей.</p>
+  </div>
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\frid.jpg" alt="Контейнеровоз">
+    <h2>Контейнеровозы</h2>
+    <p>Перевозка морских контейнеров (20ft, 40ft). Часто применяются в мультимодальных перевозках.</p>
+  </div>
+
+  <div class="truck-card">
+    <img src="C:\Users\ravsh\OneDrive\Рабочий стол\fly-khiva-site\modernizaciya_vagona_cisterny.jpg" alt="Цистерна">
+    <h2>Цистерны</h2>
+    <p>Используются для перевозки жидких грузов: топливо, химия, молочные продукты.</p>
+  </div>
+
+</section>
+
+</body>
+</html>

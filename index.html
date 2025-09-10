@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fly Khiva Agency</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url(ChatGPT\ Image\ 9\ сент.\ 2025\ г.\,\ 21_30_16.png);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .logo b {
+      font-size: 18px;
+    }
+
+    .logo span {
+      font-size: 14px;
+      color: gray;
+    }
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      color: #0073e6;
+    }
+
+    .lang-select {
+      margin-left: auto;
+    }
+
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeInUp 2s forwards;
+      text-align: center;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 20%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <b id="logo-title">Fly Khiva Agency</b>
+      <span id="logo-sub">Отдел логистики</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="home">Главная</a></li>
+        <li><a href="planes.html" data-key="planes">Самолёты</a></li>
+        <li><a href="destination.html" data-key="destinations">Направления</a></li>
+        <li><a href="services.html" data-key="services">Услуги</a></li>
+        <li><a href="#" data-key="works">Наши работы</a></li>
+        <li><a href="autoservice.html" data-key="autoservice">Авто-сервис</a></li>
+        <li><a href="contact.html" data-key="contact">Контакты</a></li>
+      </ul>
+    </nav>
+
+   
+    <select id="language" class="lang-select">
+      <option value="ru">RU</option>
+      <option value="en">EN</option>
+      <option value="uz">UZ</option>
+    </select>
+  </header>
+
+  <div class="center-text" id="center-text">
+    Fly Khiva Airlines — Отдел логистики
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        logoSub: "Отдел логистики",
+        home: "Главная",
+        planes: "Самолёты",
+        destinations: "Направления",
+        services: "Услуги",
+        works: "Наши работы",
+        autoservice: "Авто-сервис",
+        contact: "Контакты",
+        center: "Fly Khiva Airlines — Отдел логистики"
+      },
+      en: {
+        logoSub: "Logistics Department",
+        home: "Home",
+        planes: "Planes",
+        destinations: "Destinations",
+        services: "Services",
+        works: "Our Works",
+        autoservice: "Car Service",
+        contact: "Contacts",
+        center: "Fly Khiva Airlines — Logistics Department"
+      },
+      uz: {
+        logoSub: "Logistika bo‘limi",
+        home: "Bosh sahifa",
+        planes: "Samolyotlar",
+        destinations: "Yo‘nalishlar",
+        services: "Xizmatlar",
+        works: "Bizning ishlar",
+        autoservice: "Avto-xizmat",
+        contact: "Kontaktlar",
+        center: "Fly Khiva Airlines — Logistika bo‘limi"
+      }
+    };
+
+    const langSelect = document.getElementById("language");
+    const elements = document.querySelectorAll("[data-key]");
+    const logoSub = document.getElementById("logo-sub");
+    const centerText = document.getElementById("center-text");
+
+    function setLanguage(lang) {
+      elements.forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.textContent = translations[lang][key];
+      });
+      logoSub.textContent = translations[lang].logoSub;
+      centerText.textContent = translations[lang].center;
+    }
+
+    langSelect.addEventListener("change", (e) => {
+      setLanguage(e.target.value);
+    });
+
+    
+    setLanguage("ru");
+  </script>
+</body>
+</html>
